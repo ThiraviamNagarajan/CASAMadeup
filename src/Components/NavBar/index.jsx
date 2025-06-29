@@ -76,7 +76,7 @@ const NavBar = () => {
             <img
               src={madeup}
               alt="Logo"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain cursor-pointer"
               onClick={()=>navigate("/")}
             />
           </div>
@@ -107,7 +107,7 @@ const NavBar = () => {
                 />
               </div>
             ) : (
-              <img src={profile} alt="Profile" className="w-[24px] h-[24px]"  onClick={() => navigate('/profile')} />
+              <img src={profile} alt="Profile" className="w-[24px] h-[24px] cursor-pointer"  onClick={() => navigate('/profile')} />
             )}
           </div>
         </div>
@@ -148,7 +148,7 @@ const NavBar = () => {
 
           <div className="fixed top-[70px] right-[0] w-[75%] md:w-full bg-[#ffffff] z-140 shadow-md h-full overflow-y-auto">
             <div className="flex flex-col gap-[20px] text-[14px] font-[400] pl-[30%]">
-              <div className="mt-[20px]" onClick={()=>navigate("/profile")}>
+              <div className="mt-[20px] cursor-pointer" onClick={()=>navigate("/profile")}>
                 <h3 className="text-[#E10000] font-semibold mb-2">
                   MY PROFILE
                 </h3>
