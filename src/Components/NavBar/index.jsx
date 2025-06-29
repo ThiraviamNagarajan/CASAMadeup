@@ -72,7 +72,6 @@ const NavBar = () => {
     <>
       <nav className="w-full h-[70px] bg-[#ffffff] shadow fixed top-0 left-0 z-50 mx-auto px-4 sm:px-6 md:px-10">
         <div className="max-w-screen-xl h-full mx-auto px-[20px] md:px-[60px] flex items-center justify-between">
-          {/* Logo */}
           <div className="w-[100px] h-[70px] flex items-center shrink-0">
             <img
               src={madeup}
@@ -82,7 +81,6 @@ const NavBar = () => {
             />
           </div>
 
-          {/* Center Nav Links */}
           {!isMobile && (
             <div className="flex items-center gap-[40px] text-[14px] font-[400]">
               {navOptions.map((option, idx) => (
@@ -96,7 +94,6 @@ const NavBar = () => {
             </div>
           )}
 
-          {/* Icons */}
           <div className="flex items-center gap-[20px] shrink-0">
             <img src={search} alt="Search" className="w-[24px] h-[24px]" />
             <img src={cart} alt="Cart" className="w-[24px] h-[24px]" />
@@ -116,7 +113,6 @@ const NavBar = () => {
         </div>
       </nav>
 
-      {/* Mobile Carousel */}
       {isMobile && (
         <div className="fixed top-[70px] w-full bg-[#ffffff] z-[100] flex justify-center shadow-md px-4 py-2 overflow-x-auto">
           <div className="flex items-center justify-between w-[90%] mt-2">
@@ -143,19 +139,15 @@ const NavBar = () => {
         </div>
       )}
 
-      {/* Mobile Sidebar Full Width with Overlay */}
       {isMobile && showSidebar && (
         <>
-          {/* Overlay */}
           <div
             className="fixed inset-0 bg-black bg-opacity-30 z-30"
             onClick={toggleSidebar}
           />
 
-          {/* Sidebar Panel */}
           <div className="fixed top-[70px] right-[0] w-[75%] md:w-full bg-[#ffffff] z-140 shadow-md h-full overflow-y-auto">
             <div className="flex flex-col gap-[20px] text-[14px] font-[400] pl-[30%]">
-              {/* My Profile Section */}
               <div className="mt-[20px]" onClick={()=>navigate("/profile")}>
                 <h3 className="text-[#E10000] font-semibold mb-2">
                   MY PROFILE
@@ -169,7 +161,6 @@ const NavBar = () => {
                 </div>
               </div>
 
-              {/* The Brand Section */}
               <div>
                 <h3 className="text-[#E10000] font-semibold mb-2">THE BRAND</h3>
                 <div className="flex flex-col gap-[10px]">

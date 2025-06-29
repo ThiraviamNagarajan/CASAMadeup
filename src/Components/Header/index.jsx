@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import pic1 from "../../assets/Images/3271O-TCM2063-SGI-3x2@2x 1 (1).png";
 import pic2 from "../../assets/Images/105567013_161594148752707_5480959666164448316_n@2x 1.png";
 import pic3 from "../../assets/Images/106480627_1412219725629450_480051060065323581_n@2x 1.png";
@@ -14,21 +14,16 @@ const Header = () => {
       setScreenWidth(window.innerWidth);
     };
 
-    // Check on initial load
     checkScreenSize();
 
-    // Add event listener for window resize
     window.addEventListener('resize', checkScreenSize);
 
-    // Cleanup event listener
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
-  // Mobile Layout - Images stacked row by row
   if (screenWidth < 768) {
     return (
       <div className="flex flex-col w-full">
-        {/* First image - mobilepic for mobile */}
         <div className='relative'>
           <img src={mobilepic} alt="mobile pic" className="w-full object-cover" />
           <div className='absolute top-[50%] left-[30%] flex justify-center'>
@@ -43,7 +38,6 @@ const Header = () => {
           </div>
         </div>
         
-        {/* Second image - pic2 with conditional height */}
         <div className='relative'>
           <img 
             src={pic2} 
@@ -66,7 +60,6 @@ const Header = () => {
 
         </div>
         
-        {/* Third image - pic3 */}
         <div className='relative'>
           <img src={pic3} alt="pic3" className="w-full object-cover" />
             <div className='absolute top-[50%] left-[30%] flex justify-center'>
@@ -76,7 +69,6 @@ const Header = () => {
           </div>
         </div>
         
-        {/* Fourth image - pic2 with conditional height */}
         <div className='relative'>
           <img 
             src={pic2} 
@@ -98,7 +90,6 @@ const Header = () => {
     );
   }
 
-  // Desktop Layout - Your original exact layout
   return (
     <div className="flex flex-col w-full ">
       <div className='relative'>

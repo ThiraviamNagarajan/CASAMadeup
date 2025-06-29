@@ -11,7 +11,6 @@ const DynamicButton = ({
   const baseClasses = `text-[#ffffff] text-sm rounded cursor-pointer border-none outline-none`;
   const dynamicClasses = `${padding} ${height} ${width}`;
 
-  // Determine background color
   const backgroundColor = Backgroundcolor || '#E10000';
 
   return (

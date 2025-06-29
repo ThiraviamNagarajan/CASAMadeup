@@ -11,7 +11,6 @@ const Subscribe = () => {
         backgroundImage: `url(${subscribeimage})`,
       }}
     >
-      {/* Glassmorphism box */}
       <div className="bg-white/10 backdrop-blur-md rounded-lg flex flex-col items-center gap-[20px] w-full max-w-[700px] mx-4">
         <div
           className="font-[800] text-[24px] text-[#ffffff] text-center"

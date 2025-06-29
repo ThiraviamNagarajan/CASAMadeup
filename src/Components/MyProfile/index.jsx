@@ -233,14 +233,12 @@ const MyProfile = () => {
     );
   }
 
-  // Desktop Layout (Your Original Code)
   return (
     <div className="px-[70px]">
       <div className="text-[#777777] text-[12px] py-[30px]">
         Home / My Profile
       </div>
       <div className="flex min-h-screen gap-[50px]">
-        {/* Left Sidebar */}
         <div className="w-[300px]">
           <div className="flex items-center gap-[20px] px-[20px]">
             <img
@@ -283,7 +281,6 @@ const MyProfile = () => {
           </div>
         </div>
 
-        {/* Right Content Area */}
         <div className="flex-1">
           {activeSection === "profile" && (
             <div className="transition-all duration-300 transform translate-x-0">

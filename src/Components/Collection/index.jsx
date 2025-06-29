@@ -1,4 +1,3 @@
-import React from "react";
 import image1 from "../../assets/Images/53c88f754956328fe056cb09869ba46940b32e54.jpg";
 import image2 from "../../assets/Images/6c7c29e77070630908039429318506a39732e089.jpg";
 
@@ -26,7 +25,6 @@ const Collection = () => {
         </div>
       </div>
 
-      {/* Horizontal scrollable section */}
       <div className="overflow-x-auto mt-[40px]">
         <div className="inline-flex gap-[40px]">
           {collection.map((val, index) => (

@@ -1,7 +1,3 @@
-import React from "react";
-
-
-
 const Badge = ({ text, highlight }) => {
   const words = text.split(" ");
   if (words.length === 0) return null;

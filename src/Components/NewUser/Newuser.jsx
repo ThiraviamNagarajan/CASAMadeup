@@ -1,4 +1,3 @@
-import React from 'react'
 import InputField from '../../Common Components/Input'
 import DynamicButton from '../../Common Components/Button'
 
