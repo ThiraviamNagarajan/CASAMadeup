@@ -36,13 +36,13 @@ const NavBar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const prevIsMobile = useRef(window.innerWidth <= 768);
 
-  const carousalData=[
-              { label: "For Me", img: forme, bgcolor: "#e6e7e7" },
-              { label: "Jeans", img: jeans, bgcolor: "#E8F7FD" },
-              { label: "T-Shirts", img: Tshirt, bgcolor: "#ffe3e3" },
-              { label: "Shirts", img: Shirt, bgcolor: "#eae8fd" },
-              { label: "Trousers", img: Trousers, bgcolor: "#fafae0" },
-            ]
+  const carousalData = [
+    { label: "For Me", img: forme, bgcolor: "#e6e7e7" },
+    { label: "Jeans", img: jeans, bgcolor: "#E8F7FD" },
+    { label: "T-Shirts", img: Tshirt, bgcolor: "#ffe3e3" },
+    { label: "Shirts", img: Shirt, bgcolor: "#eae8fd" },
+    { label: "Trousers", img: Trousers, bgcolor: "#fafae0" },
+  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -77,7 +77,7 @@ const NavBar = () => {
               src={madeup}
               alt="Logo"
               className="w-full h-full object-contain cursor-pointer"
-              onClick={()=>navigate("/")}
+              onClick={() => navigate("/")}
             />
           </div>
 
@@ -86,7 +86,9 @@ const NavBar = () => {
               {navOptions.map((option, idx) => (
                 <span
                   key={idx}
-                  className="cursor-pointer hover:text-gray-500 transition whitespace-nowrap"
+                  className="cursor-pointer transition whitespace-nowrap"
+                  onMouseEnter={(e) => (e.target.style.color = "#e10000")}
+                  onMouseLeave={(e) => (e.target.style.color = "")}
                 >
                   {option}
                 </span>
@@ -107,7 +109,12 @@ const NavBar = () => {
                 />
               </div>
             ) : (
-              <img src={profile} alt="Profile" className="w-[24px] h-[24px] cursor-pointer"  onClick={() => navigate('/profile')} />
+              <img
+                src={profile}
+                alt="Profile"
+                className="w-[24px] h-[24px] cursor-pointer"
+                onClick={() => navigate("/profile")}
+              />
             )}
           </div>
         </div>
@@ -122,7 +129,8 @@ const NavBar = () => {
                 className="flex flex-col items-center justify-center shrink-0 mt-[4%]"
               >
                 <div
-                  className="h-[60px] w-[60px] rounded-full overflow-hidden flex items-center justify-center " style={{backgroundColor:item.bgcolor}}
+                  className="h-[60px] w-[60px] rounded-full overflow-hidden flex items-center justify-center "
+                  style={{ backgroundColor: item.bgcolor }}
                 >
                   <img
                     src={item.img}
@@ -148,7 +156,10 @@ const NavBar = () => {
 
           <div className="fixed top-[70px] right-[0] w-[75%] md:w-full bg-[#ffffff] z-140 shadow-md h-full overflow-y-auto">
             <div className="flex flex-col gap-[20px] text-[14px] font-[400] pl-[30%]">
-              <div className="mt-[20px] cursor-pointer" onClick={()=>navigate("/profile")}>
+              <div
+                className="mt-[20px] cursor-pointer"
+                onClick={() => navigate("/profile")}
+              >
                 <h3 className="text-[#E10000] font-semibold mb-2">
                   MY PROFILE
                 </h3>
